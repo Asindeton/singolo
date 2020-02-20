@@ -167,6 +167,46 @@ li::after{
     left: 41px;
 }
 
+.our-service__info-line{
+    display: flex;
+    position: absolute;
+    justify-content: space-around;
+    width: 100%;
+}
+.upper-line{
+    top: 219px;
+}
+
+.bottom-line{
+    top: 331px;
+}
+
+.our-service__element{
+    display: flex;
+    width: 300px;
+    height: 87px;
+}
+
+.our-service__element-title{
+    font-size: 18px;
+    line-height: 18px;
+    color: #666d89;
+    font-family: "Lato";
+    font-weight: 900;
+    text-align: left;
+}
+
+.our-service__element-text{
+    width: 219px;
+    height: 128px;
+    font-size: 12px;
+    line-height: 22px;
+    color: #767e9e;
+    font-family: "Lato";
+    font-weight: 400;
+    text-align: left;
+}
+
 .our-service__bottom-line{
     height: 6px;
     background-color: #ffffff;
