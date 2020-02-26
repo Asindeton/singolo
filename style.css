@@ -128,11 +128,23 @@ li::after{
     left: 50%;
     transform: translate(-50%, -50%);
 }
+.slider__phone-img>img{
+    position: absolute;
+    top: -137px;
+    left: -14px;
+}
 
 .horizontal{
     transform: rotate(90deg);
     left: 547px;
     box-shadow: 25px -25px 0px 0px rgba(0,0,0,0.15);
+}
+
+#img-horizontal{
+    transform: rotate(-90deg);
+    position: absolute;
+    left: -120px;
+    top: -123px;
 }
 
 .our-service__wrapper{
@@ -166,25 +178,35 @@ li::after{
     top: 115px;
     left: 41px;
 }
-
-.our-service__info-line{
-    display: flex;
+.our-service__first-column{
     position: absolute;
-    justify-content: space-around;
-    width: 100%;
+    left: 39px;
+    top: 206px;
 }
-.upper-line{
-    top: 219px;
+.our-service__second-column{
+    position: absolute;
+    top: 206px;
+    left: 358px;
 }
-
-.bottom-line{
-    top: 331px;
+.our-service__third-column{
+    position: absolute;
+    left: 678px;
+    top: 206px;
 }
 
 .our-service__element{
     display: flex;
     width: 300px;
     height: 87px;
+    margin-bottom: 36px;
+    position: relative;
+
+}
+
+.our-service__element-info{
+    position: absolute;
+    top: 12px;
+    left: 80px;
 }
 
 .our-service__element-title{
@@ -205,6 +227,9 @@ li::after{
     font-family: "Lato";
     font-weight: 400;
     text-align: left;
+    position: absolute;
+    top: 28px;
+    left: 2px;
 }
 
 .our-service__bottom-line{
