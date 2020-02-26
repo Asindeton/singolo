@@ -236,3 +236,43 @@ li::after{
     height: 6px;
     background-color: #ffffff;
 }
+
+.portfolio__wrapper{
+    height: 870px;
+    background-color: #2d303a;
+    width: 100%;
+}
+
+.portfolio__bottom-line{
+    height: 6px;
+    background-color: #323746;
+    width: 100%;
+}
+
+.about-us__wrapper{
+    height: 728px;
+    width: 100%;
+    background-color: #f2f2f2;
+}
+.about-us__bottom-line{
+    height: 6px;
+    width: 100%;
+    background-color: #ffffff;
+}
+
+.get-a-quote__wrapper{
+    height: 648px;
+    width: 100%;
+    background-color: #f06c64;
+}
+.get-a-quote__bottom-line{
+    height: 6px;
+    width: 100%;
+    background-color: #ea676b;
+}
+
+.footer__wrapper{
+    height: 76px;
+    width: 100%;
+    background-color: #2d303a;
+}
