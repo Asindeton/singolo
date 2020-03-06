@@ -1,3 +1,5 @@
+@import "./fonts.css";
+
 body{
     max-width: 1020px;
     margin: 0 auto;
@@ -15,12 +17,11 @@ body{
 }
 
 h1{
-    font-size: 25px;
+    font-size: 24px;
     line-height: 6px;
-    font-family: "Lato";
-    font-weight: 700;
+    font-family: "Lato-Bold";
     position: absolute;
-    left: 35px;
+    left: 40px;
     top: 40px;
 }
 
@@ -30,16 +31,17 @@ h1{
 
 .nav-bar__wrapper>ul{
     position: absolute;
-    right: 40px;
+    right: 13px;
     top: 40px;
 }
 .nav-bar__wrapper>ul>li{
+    font-size: 12px;
+    line-height: 6px;
+    font-family: "Lato-Bold";
+    text-align: left;
     display: inline-block;
+    margin-right: 25px;
 }
-.nav-bar__wrapper>ul>li::after{
-    content: "   ·";
-}
-
 
 .header__bottom-line{
     height: 6px;
@@ -377,13 +379,13 @@ h1{
     margin-top: 9px;
 }
 
-.about-us__social-network{
+.social-network{
     display: flex;
     flex-direction: row;
     margin-top: 21px;
 }
 
-.about-us__social-network>li{
+.social-network>li{
     width: 32px;
     height: 32px;
     border-radius: 16px;
@@ -456,13 +458,14 @@ input{
 }
 
 .big-text-area{
-    height: 203px;
+    height: 195px;
     border-radius: 5px;
     background-color: #d6564f;
     margin-bottom: 16px;
     border: none;
     font-family: "Lato";
     resize: none;
+    padding-top: 7px;
 }
 
 .input-text{
@@ -480,6 +483,21 @@ input{
     position: absolute;
     right: 40px;
     top: 210px;
+    font-size: 12px;
+    line-height: 22px;
+    color: #f0d8d9;
+    font-family: "Lato";
+    font-weight: 400;
+    text-align: left;
+}
+
+.get-a-quote__contact-area__title{
+    font-size: 18px;
+    line-height: 18px;
+    color: #f0d8d9;
+    font-family: "Lato";
+    font-weight: 900;
+    text-align: left;
 }
 
 .get-a-quote__bottom-line{
@@ -492,6 +510,25 @@ input{
     height: 76px;
     width: 100%;
     background-color: #2d303a;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+
+}
+
+.footer-text{
+    margin-top: 35px;
+    margin-left: 43px;
+    font-size: 12px;
+    line-height: 6px;
+    color: #666d89;
+    font-family: "Lato";
+    font-weight: 400;
+    text-align: left;
+}
+
+.social-network-footer{
+    margin-right: 33px
 }
 
 ::-webkit-input-placeholder {
