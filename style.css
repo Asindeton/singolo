@@ -4,8 +4,16 @@ body{
     max-width: 1020px;
     margin: 0 auto;
 }
+html {
+    scroll-behavior: smooth;
+}
 
-.color__red{
+a{
+    text-decoration: none;
+    color: unset;
+}
+
+.active__header{
     color: #f06c64;
 }
 
@@ -49,13 +57,26 @@ h1{
     background-color: #323746;
 }
 
-.slider__wrapper{
-    height: 594px;
-    background-color: #f06c64;
+.slider__item{
     position: relative;
+    max-width: 100%;
+    height: 100%;
+    flex: 0 0 100%;
+    transition: transform 0.6s ease;
+    transform: translateX(-100%);
 }
 
-.slider__to__left{
+
+.slider__wrapper{
+    height: 600px;
+    background-color: #f06c64;
+    position: relative;
+    display: flex;
+    transition: transform 0.6s ease;
+    /* overflow: hidden; */
+}
+
+.slider__control_left{
     position: absolute;
     left: 43px;
     top: 281px;
@@ -63,7 +84,7 @@ h1{
     cursor: pointer;
 }
 
-.slider__to__right{
+.slider__control_right{
     position: absolute;
     right: 40px;
     top: 280px;
@@ -72,7 +93,10 @@ h1{
 }
 
 .slider__bottom-line{
+    position: absolute;
+    bottom: 0px;
     height: 6px;
+    width: 100%;
     background-color: #ea676b;
 }
 
@@ -114,6 +138,12 @@ h1{
     border: 3px solid #c6c6c6;
     overflow: hidden;
     border-radius: 5px;
+    background-color: black;
+    user-select: none;
+}
+
+.del-phone-img{
+    visibility: hidden;
 }
 
 .slider__phone-speaker{
@@ -292,9 +322,10 @@ h1{
     left: 35px;
     top: 152px;
 }
-.portfolio-filter>li:first-child{
+
+.portfolio-filter-active{
     color: #DEDEDE;
-    border-color: #DEDEDE;
+    border-color: #DEDEDE !important;
 }
 
 .portfolio-images__wrapper{
@@ -302,8 +333,8 @@ h1{
     justify-content: center;
     flex-direction: row;
     position: absolute;
-    left: 40px;
-    top: 194px;
+    left: 36px;
+    top: 189px;
 }
 
 .portfolio-filter>li{
@@ -318,8 +349,13 @@ h1{
 .portfolio-images-column>li{
     width: 221px;
     height: 188px;
-    background-color: #464b5e;
     margin: 0 19px 19px 0;
+}
+.portfolio-image{
+    border: 5px transparent solid;
+}
+.portfolio-images_active{
+    border: 5px solid #F06C64 !important;
 }
 
 .portfolio__bottom-line{

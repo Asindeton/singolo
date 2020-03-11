@@ -8,17 +8,19 @@
     <title>Singolo</title>
 </head>
 <body>
+    <script src="./script.js"></script>
     <header>
         <div class="header__wrapper">
-            <h1>SINGOLO<span class="color__red">*</span></h1>
+            <a name="HOME"></a>
+            <h1>SINGOLO<span class="active__header">*</span></h1>
             <nav>
                 <div class="nav-bar__wrapper">
-                    <ul>
-                        <li class="nav-bar__text"><span class="color__red">HOME</span></li>
-                        <li class="nav-bar__text">SERVICES</li>
-                        <li class="nav-bar__text">PORTFOLIO</li>
-                        <li class="nav-bar__text">ABOUT</li>
-                        <li class="nav-bar__text">CONTACT</li>
+                    <ul class="tesqwert">
+                        <li class="nav-bar__text active__header"><a href="#HOME">HOME</a></li>
+                        <li class="nav-bar__text"><a href="#SERVICES">SERVICES</a></li>
+                        <li class="nav-bar__text"><a href="#PORTFOLIO">PORTFOLIO</a></li>
+                        <li class="nav-bar__text"><a href="#ABOUT">ABOUT</a></li>
+                        <li class="nav-bar__text"><a href="#CONTACT">CONTACT</a></li>
                     </ul>
                 </div>
             </nav>
@@ -27,37 +29,40 @@
     </header>
     <main>
         <div class="slider__wrapper">
-            <div class="slider__to-left"></div>
-            <div class="slider__ro-right"></div>
-            <div class="slider__phone">
-                <div class="slider__phone-cam">
-                    <div class="slider__phone-cam__red-dot"></div>
+            <div class="slider__item"><img src="./assets/main/Slider.png" alt=""></div>
+            <div class="slider__item">
+                <div class="slider__phone">
+                    <div class="slider__phone-cam">
+                        <div class="slider__phone-cam__red-dot"></div>
+                    </div>
+                    <div class="slider__phone-speaker"></div>
+                    <div class="slider__phone-img">
+                        <img src="./assets/main/singolo1.png" alt="" class="phone-img">
+                    </div>
+                    <div class="slider__phone-menu-button">
+                        <div class="button"></div>
+                    </div>
                 </div>
-                <div class="slider__phone-speaker"></div>
-                <div class="slider__phone-img">
-                    <img src="./assets/main/singolo1.png" alt="">
+                <div class="slider__phone horizontal">
+                    <div class="slider__phone-cam">
+                        <div class="slider__phone-cam__red-dot"></div>
+                    </div>
+                    <div class="slider__phone-speaker"></div>
+                    <div class="slider__phone-img">
+                        <img src="./assets/main/index.png" alt="" id="img-horizontal" class="phone-img">
+                    </div>
+                    <div class="slider__phone-menu-button">
+                        <div class="button"></div>
+                    </div>
                 </div>
-                <div class="slider__phone-menu-button">
-                    <div class="button"></div>
-                </div>
+                <div class="slider__bottom-line"></div>
             </div>
-            <div class="slider__phone horizontal">
-                <div class="slider__phone-cam">
-                    <div class="slider__phone-cam__red-dot"></div>
-                </div>
-                <div class="slider__phone-speaker"></div>
-                <div class="slider__phone-img">
-                    <img src="./assets/main/index.png" alt="" id="img-horizontal">
-                </div>
-                <div class="slider__phone-menu-button">
-                    <div class="button"></div>
-                </div>
-            </div>
-            <div class="slider__to__right"><img src="./assets/main/chev@2X.png" alt=""></div>
-            <div class="slider__to__left"><img src="./assets/main/chev@1X.png" alt=""></div>
-        </div>
-        <div class="slider__bottom-line"></div>
+            <div class="slider__item"><img src="./assets/main/Slider.png" alt=""></div>
+            <div class="slider__control_right"><img src="./assets/main/chev@2X.png" alt=""></div>
+            <div class="slider__control_left"><img src="./assets/main/chev@1X.png" alt=""></div>
+        </div>  
         <div class="our-service__wrapper">
+            <a name="SERVICES"></a>
             <h2 class="our-service__title">Our Services</h2>
             <p class="our-service__text">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
             <div class="our-service__first-column">
@@ -111,39 +116,41 @@
         </div>
         <div class="our-service__bottom-line"></div>
         <div class="portfolio__wrapper">
+            <a name="PORTFOLIO"></a>
             <h2 class="portfolio__title">Portfolio</h2>
             <p class="portfolio__text">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
             <ul class="portfolio-filter">
-                <li>All</li>
-                <li>Web Design</li>
-                <li>Graphic Design</li>
-                <li>Artwork</li>
+                <li class="portfolio-filter-item portfolio-filter-active">All</li>
+                <li class="portfolio-filter-item">Web Design</li>
+                <li class="portfolio-filter-item">Graphic Design</li>
+                <li class="portfolio-filter-item">Artwork</li>
             </ul>
             <div class="portfolio-images__wrapper">
                 <ul class="portfolio-images-column">
-                    <li><img src="./assets/portfolio-images/row1/1.jpg" alt="1"></li>
-                    <li><img src="./assets/portfolio-images/row2/1.jpg" alt="1"></li>
-                    <li><img src="./assets/portfolio-images/row3/1.jpg" alt="1"></li>
+                    <li><img src="./assets/portfolio-images/row1/1.jpg" alt="1"class="portfolio-image"></li>
+                    <li><img src="./assets/portfolio-images/row2/1.jpg" alt="1"class="portfolio-image"></li>
+                    <li><img src="./assets/portfolio-images/row3/1.jpg" alt="1"class="portfolio-image"></li>
                 </ul>
                 <ul class="portfolio-images-column">
-                    <li><img src="./assets/portfolio-images/row1/2.jpg" alt="1"></li>
-                    <li><img src="./assets/portfolio-images/row2/2.jpg" alt="1"></li>
-                    <li><img src="./assets/portfolio-images/row3/2.jpg" alt="1"></li>
+                    <li><img src="./assets/portfolio-images/row1/2.jpg" alt="1"class="portfolio-image"></li>
+                    <li><img src="./assets/portfolio-images/row2/2.jpg" alt="1"class="portfolio-image"></li>
+                    <li><img src="./assets/portfolio-images/row3/2.jpg" alt="1"class="portfolio-image"></li>
                 </ul>
                 <ul class="portfolio-images-column">
-                    <li><img src="./assets/portfolio-images/row1/3.jpg" alt="1"></li>
-                    <li><img src="./assets/portfolio-images/row2/3.jpg" alt="1"></li>
-                    <li><img src="./assets/portfolio-images/row3/3.jpg" alt="1"></li>
+                    <li><img src="./assets/portfolio-images/row1/3.jpg" alt="1"class="portfolio-image"></li>
+                    <li><img src="./assets/portfolio-images/row2/3.jpg" alt="1"class="portfolio-image"></li>
+                    <li><img src="./assets/portfolio-images/row3/3.jpg" alt="1"class="portfolio-image"></li>
                 </ul>
                 <ul class="portfolio-images-column">
-                    <li><img src="./assets/portfolio-images/row1/4.jpg" alt="1"></li>
-                    <li><img src="./assets/portfolio-images/row2/4.jpg" alt="1"></li>
-                    <li><img src="./assets/portfolio-images/row3/4.jpg" alt="1"></li>
+                    <li><img src="./assets/portfolio-images/row1/4.jpg" alt="1"class="portfolio-image"></li>
+                    <li><img src="./assets/portfolio-images/row2/4.jpg" alt="1"class="portfolio-image"></li>
+                    <li><img src="./assets/portfolio-images/row3/4.jpg" alt="1"class="portfolio-image"></li>
                 </ul>
             </div>
         </div>
         <div class="portfolio__bottom-line"></div>
         <div class="about-us__wrapper">
+            <a name="ABOUT"></a>
             <h2 class="about-us__title">About Us</h2>
             <p class="about-us__text">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
             <ul class="about-us__columns">
@@ -184,14 +191,15 @@
         </div>
         <div class="about-us__bottom-line"></div>
         <div class="get-a-quote__wrapper">
+            <a name="CONTACT"></a>
             <h2 class="get-a-quote__title">Get a Quote</h2>
             <p class="get-a-quote__text">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-                <form action=""class="input-area">
+                <form action="#" class="input-area" onsubmit='submitForm()'> 
                     <input type="text" name="" id="" class="input-text" placeholder="Name (Required)" required>
                     <input type="email" name="" id="" class="input-text" placeholder="Email (Required)" required>
                     <input type="text" name="" id="" class="input-text" placeholder="Subject">
                     <textarea name="" id="" cols="30" rows="10" class="big-text-area input-text" placeholder="Describe your project in detail..."></textarea>
-                    <button class="send-button" type="submit">SEND</button>
+                    <button class="send-button">SEND</button>
                 </form>
             <div class="get-a-quote__contact-area">
                 <h3 class="get-a-quote__contact-area__title">Contact Information</h3>
