@@ -1,7 +1,10 @@
-document.addEventListener('click', function(e){
+let counter = -1;
+let isFirst = true;
+
+document.addEventListener('click', function(){
     if(document.querySelector('.nav-bar__text:hover')){
-    document.querySelectorAll('.nav-bar__text').forEach((e) => e.classList.remove('active__header'))
-    document.querySelector('.nav-bar__text:hover').classList.toggle('active__header')
+        document.querySelectorAll('.nav-bar__text').forEach((e) => e.classList.remove('active__header'))
+        document.querySelector('.nav-bar__text:hover').classList.toggle('active__header')
     } else if(document.querySelector('.portfolio-filter-item:hover')) {
         document.querySelector('.portfolio-filter-item:hover').classList.length !== 2 ? mixImg(): false;
         document.querySelectorAll('.portfolio-filter-item').forEach((e) => e.classList.remove('portfolio-filter-active'))
@@ -10,14 +13,11 @@ document.addEventListener('click', function(e){
         document.querySelectorAll('.portfolio-image').forEach((e) => e.classList.remove('portfolio-images_active'))
         document.querySelector('.portfolio-image:hover').classList.toggle('portfolio-images_active')
     } else if(document.querySelector('.slider__phone-img:hover')){
-        console.log('telephone')
         document.querySelector('.slider__phone-img:hover>.phone-img').classList.toggle('del-phone-img')
     } else if(document.querySelector('.slider__control_right:hover')){
         toRight()
-
     }if(document.querySelector('.slider__control_left:hover')){
         toLeft()
-
     }
 })
 
@@ -66,68 +66,29 @@ function shuffle(arr){
 
 function toRight(){
     if(isFirst){
-        R--
-        document.querySelectorAll('.slider__item')[0].insertAdjacentHTML('beforebegin', firstSlide);
-        document.querySelectorAll('.slider__item').forEach(e => e.style.transform = `translateX(-100%)`)
-        document.querySelector('.slider__wrapper').removeChild(document.querySelectorAll('.slider__item')[document.querySelectorAll('.slider__item').length-1])
-
+        counter--
+        document.querySelectorAll('.slider__item')[0].style.transform = `translateX(${counter * -100}%)`
+        document.querySelector('.slider').style.transform = `translateX(${counter * 100}%)`;
         isFirst = false;
     } else {
-        R--
-        document.querySelectorAll('.slider__item')[0].insertAdjacentHTML('beforebegin', secondSlide);
-        document.querySelectorAll('.slider__item').forEach(e => e.style.transform = `translateX(-100%)`)
-
-        document.querySelector('.slider__wrapper').removeChild(document.querySelectorAll('.slider__item')[document.querySelectorAll('.slider__item').length-1])
+        counter--
+        document.querySelectorAll('.slider__item')[1].style.transform = `translateX(${(counter+1) * -100}%)`
+        document.querySelector('.slider').style.transform = `translateX(${counter * 100}%)`;
         isFirst = true;
     }
 }
 
 function toLeft(){
     if(isFirst){
-        document.querySelectorAll('.slider__item')[document.querySelectorAll('.slider__item').length-1].insertAdjacentHTML('afterend', firstSlide);
-        document.querySelectorAll('.slider__item').forEach(e => e.style.transform = `translateX(0)`)
-        document.querySelector('.slider__wrapper').removeChild(document.querySelectorAll('.slider__item')[0])
-        R++
+        counter++
+        document.querySelectorAll('.slider__item')[0].style.transform = `translateX(${counter * -100}%)`
+        document.querySelector('.slider').style.transform = `translateX(${counter * 100}%)`;
         isFirst = false;
     } else {
-        R++
-        document.querySelectorAll('.slider__item')[document.querySelectorAll('.slider__item').length-1].insertAdjacentHTML('afterend', secondSlide);
-        document.querySelectorAll('.slider__item').forEach(e => e.style.transform = `translateX(0)`)
-        document.querySelector('.slider__wrapper').removeChild(document.querySelectorAll('.slider__item')[0])
-
+        counter++
+        document.querySelectorAll('.slider__item')[1].style.transform = `translateX(${(counter+1) * -100}%)`
+        document.querySelector('.slider').style.transform = `translateX(${counter * 100}%)`;
         isFirst = true;
     }
 }
 
-let R = -1;
-
-let isFirst = true;
-const firstSlide = `            <div class="slider__item">
-<div class="slider__phone">
-    <div class="slider__phone-cam">
-        <div class="slider__phone-cam__red-dot"></div>
-    </div>
-    <div class="slider__phone-speaker"></div>
-    <div class="slider__phone-img">
-        <img src="./assets/main/singolo1.png" alt="" class="phone-img">
-    </div>
-    <div class="slider__phone-menu-button">
-        <div class="button"></div>
-    </div>
-</div>
-<div class="slider__phone horizontal">
-    <div class="slider__phone-cam">
-        <div class="slider__phone-cam__red-dot"></div>
-    </div>
-    <div class="slider__phone-speaker"></div>
-    <div class="slider__phone-img">
-        <img src="./assets/main/index.png" alt="" id="img-horizontal" class="phone-img">
-    </div>
-    <div class="slider__phone-menu-button">
-        <div class="button"></div>
-    </div>
-</div>
-<div class="slider__bottom-line"></div>
-</div>`
-
-const secondSlide = `            <div class="slider__item"><img src="./assets/main/Slider.png" alt=""></div>`
