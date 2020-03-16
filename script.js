@@ -12,8 +12,8 @@ document.addEventListener('click', function(){
     } else if(document.querySelector('.portfolio-image:hover')){
         document.querySelectorAll('.portfolio-image').forEach((e) => e.classList.remove('portfolio-images_active'))
         document.querySelector('.portfolio-image:hover').classList.toggle('portfolio-images_active')
-    } else if(document.querySelector('.slider__phone-img:hover')){
-        document.querySelector('.slider__phone-img:hover>.phone-img').classList.toggle('del-phone-img')
+    } else if(document.querySelector('.slider__phone-menu-button:hover')){
+        document.querySelector('.slider__phone:hover>.slider__phone-img>.phone-img').classList.toggle('del-phone-img')
     } else if(document.querySelector('.slider__control_right:hover')){
         toRight()
     }if(document.querySelector('.slider__control_left:hover')){

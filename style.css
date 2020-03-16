@@ -118,6 +118,7 @@ h1{
     border-radius: 21px;
     background-color: #fafafa;
     position: absolute;
+    cursor: pointer;
     left: 86px;
     top: 408px;
 }
